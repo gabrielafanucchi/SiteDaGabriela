@@ -1,13 +1,12 @@
 :root {
     --primary-color: white;
     --secondary-color: yellow;
-    --primary-background: rgb(122, 198, 241);
-    --secondary-background: blue;
+    --primary-background: steelblue;
+    --secondary-background: #191970	;
     --tertiary-background: white;
     font-family: Montserrat, sans-serif;
     font-size: 16px;
-    line-height: 1.5em;
-    
+    line-height: 1.5em;  
 }
 
 * {
@@ -17,6 +16,11 @@ body {
     margin: 0;
     padding: 0;
     background: var(--primary-background);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 li, a {
@@ -32,11 +36,31 @@ body {
 header#cabecalho-principal {
     background: var(--secondary-background);
     color: var(--primary-color);
-    height: 80px;
+    height: 200px;
+    display: grid;
+    width: 100%;
+}
+
+main{
+    background-color: whitesmoke;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+    width: 100%;
+}
+
+main section {
+    background-color: whitesmoke;
+    height: 200px;
+    border: 10px solid navy;
+    text-justify: center;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    grid-area: header;
+    font-size: x-large;
+    font-weight: bold;
+    color: navy;
 }
 
 nav#navegacao-principal {
@@ -57,14 +81,14 @@ nav#navegacao-principal li {
     padding: 10px;
 }
 
-main {
-    align-self: center;
-    width: calc(100% - 60px);
-    display: grid;
-    grid-template-columns: auto 300px;
-    grid-template-areas: "sec1 aside"
-                         "sec2 aside";
-}
+// main {
+//     align-self: center;
+//     width: calc(100% - 60px);
+//     display: grid;
+//     grid-template-columns: auto 300px;
+//     grid-template-areas: "sec1 aside"
+//                          "sec2 aside";
+// }
 
 .posts {
     grid-area: sec1;
@@ -121,6 +145,7 @@ footer#rodape-principal {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 @media only screen and (max-width: 768px) {

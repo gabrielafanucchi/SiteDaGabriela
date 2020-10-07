@@ -1,22 +1,24 @@
-:root { --primary-color: white; --secondary-color: yellow; --primary-background: rgb(122, 198, 241); --secondary-background: blue; --tertiary-background: white; font-family: Montserrat, sans-serif; font-size: 16px; line-height: 1.5em; }
+:root { --primary-color: white; --secondary-color: yellow; --primary-background: steelblue; --secondary-background: #191970	; --tertiary-background: white; font-family: Montserrat, sans-serif; font-size: 16px; line-height: 1.5em; }
 
 * { box-sizing: border-box; }
 
-body { margin: 0; padding: 0; background: var(--primary-background); }
+body { margin: 0; padding: 0; background: var(--primary-background); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
 
 li, a { color: var(--light); text-decoration: none; }
 
 body { display: flex; flex-direction: column; }
 
-header#cabecalho-principal { background: var(--secondary-background); color: var(--primary-color); height: 80px; display: flex; justify-content: center; align-items: center; grid-area: header; }
+header#cabecalho-principal { background: var(--secondary-background); color: var(--primary-color); height: 200px; display: grid; width: 100%; }
+
+main { background-color: whitesmoke; margin: 0px auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); width: 100%; }
+
+main section { background-color: whitesmoke; height: 200px; border: 10px solid navy; text-justify: center; display: flex; flex-direction: row; justify-content: center; align-items: center; font-size: x-large; font-weight: bold; color: navy; }
 
 nav#navegacao-principal { background: var(--secondary-background); color: var(--primary-color); display: flex; justify-content: center; grid-area: nav; }
 
 nav#navegacao-principal ul { margin: 0; padding: 0; }
 
 nav#navegacao-principal li { display: inline-block; padding: 10px; }
-
-main { align-self: center; width: calc(100% - 60px); display: grid; grid-template-columns: auto 300px; grid-template-areas: "sec1 aside" "sec2 aside"; }
 
 .posts { grid-area: sec1; display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); }
 
@@ -36,7 +38,7 @@ aside { margin: 50px 30px; height: 80%; border: 15px solid var(--secondary-backg
 
 aside p { padding: 20px; }
 
-footer#rodape-principal { margin-top: 30px; background: var(--secondary-background); color: var(--primary-color); height: 60px; display: flex; justify-content: center; align-items: center; }
+footer#rodape-principal { margin-top: 30px; background: var(--secondary-background); color: var(--primary-color); height: 60px; display: flex; justify-content: center; align-items: center; width: 100%; }
 
 @media only screen and (max-width: 768px) { main { grid-template-columns: auto; grid-template-areas: "sec1" "sec2" "aside"; } }
 

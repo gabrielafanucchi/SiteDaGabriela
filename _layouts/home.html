@@ -2,8 +2,10 @@
 layout: default
 ---
 
-<ul>
-{% for post in site.posts %}
-<a href ="{{ post.url | relative_url }} "> {{post.title}}</a><br>
-{% endfor %}
-</ul>
+<main>   
+    {% for post in site.posts %}
+    <section>
+        <a href ="{{ post.url | relative_url }} "> {{post.title}}</a><br>
+    </section>
+    {% endfor %}
+</main>
